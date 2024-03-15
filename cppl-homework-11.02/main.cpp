@@ -28,11 +28,11 @@ public:
       }
 }
 big_integer(const std::vector<T>& v) : v1(v) {}
-big_integer(const big_integer& other)
+big_integer(const big_integer& other) noexcept
 {
     v1 = other.v1;
 }
-big_integer(big_integer&& other)
+big_integer(big_integer&& other) noexcept
 {
     v1 = std::move(other.v1);
 }
